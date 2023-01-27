@@ -17,6 +17,32 @@
     </div>
       </a-col>
     </a-row>
+    <a-row class="pt-10 pl-10" type="flex" justify="center">
+        <a-col :span="3">
+            <div class="colorBg">
+            </div>
+            <p>Movies</p>
+            
+        </a-col>
+        <a-col :span="3">
+            <div class="colorBg">
+            </div>
+            <p>Movies</p>
+        </a-col>
+        <a-col :span="3">
+            <div class="colorBg">
+            </div>
+            <p>Movies</p>
+        </a-col>
+        <a-col :span="3">
+            <div class="colorBg">
+                <img class="pl-3 pt-2" src="../static/console.png" alt="">
+            </div>
+            <p>Movies</p>
+
+        </a-col>
+        
+    </a-row>
   </div>
 </template>
 
@@ -30,6 +56,18 @@ export default {};
     border:1px solid #ff6735;
     font-size: 20px;
     font-weight: bold;
+}
+.colorBg{
+    background-color: #ee490e;
+    height: 72px;
+    width: 72px;
+    border-radius: 100%;
+}
+.colorBg img{
+    width: 60px;
+    height: 50px;
+    /* border-radius: 100%; */
+    border: 2px yellow solid;
 }
 
 </style>
