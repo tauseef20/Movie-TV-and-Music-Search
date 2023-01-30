@@ -27,12 +27,14 @@
         <!-- <a slot="year">
           <span>{{ obj.year }}</span>
           </a> -->
-          <a slot="directed">
+          <a slot="directed" slot-scope="obj">
           <span>{{ obj && obj.directedBy[0] }}</span>
           </a>
-          <!-- <a slot="link">
-          <span>{{ obj && obj.directedBy }}</span>
-          </a> -->
+          
+          <a slot="link" slot-scope="obj">
+            <a :href="obj.url" target="blank">Watch Movie</a>
+          </a>
+       
       </a-table>
     </a-row>
   </div>
@@ -43,9 +45,10 @@ const columns = [
   {
     title: "Image",
     scopedSlots: { customRender: "image" },
+    align:"center"
   },
   {
-    title: "Title",
+    title: "Name",
     dataIndex: "title",
     key: "title",
     // scopedSlots: { customRender: "title" },
@@ -62,9 +65,7 @@ const columns = [
   },
   {
     title: "Link",
-    dataIndex: "url",
-    key: "url",
-    // scopedSlots: { customRender: "link" },
+    scopedSlots: { customRender: "link" },
   },
 ];
 import { mapGetters, mapActions } from "vuex";
@@ -94,5 +95,9 @@ export default {
 }
 .icon {
   background: #d63600;
+}
+.ant-table-thead{
+   background: #979797;
+   color: #fff;
 }
 </style>

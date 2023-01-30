@@ -10,5 +10,8 @@ export default () => ({
     {image:"/sidebar/console.png" , title:"Games"},
     {image:"/sidebar/tv.png" , title:"TV Shows"},
   ],
-  moviesData:[]
+  moviesData:[],
+  musicsData:[],
+  showsData:[],
+  GAMEData:[]
 });
