@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- {{ getmovieData }} -->
     <a-row class="topRow">
       <a-col align="middle" class="icon" :span="2">
         <img
@@ -83,7 +82,7 @@ export default {
     };
   },
   methods: {
-    ...mapActions("modules/data", ["movieData"]),
+    ...mapActions("modules/data", ["movieData" , "SearchData"]),
   },
 };
 </script>

@@ -7,7 +7,9 @@
             <a-col :span="6">
               <img :src="data.image" width="30px" height="30px" alt="" />
             </a-col>
+            <NuxtLink :to="data.link">
             <a-col :span="18">{{ data.title }}</a-col>
+            </NuxtLink>
           </a-row>
           <a-divider />
         </a-col>

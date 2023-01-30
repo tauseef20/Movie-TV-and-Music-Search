@@ -81,4 +81,25 @@ export default {
         console.error(error);
       });
   },
+  SearchData({ commit }, payload) {
+    debugger;
+    const options = {
+      method: 'GET',
+      url: `https://movie-tv-music-search-and-download.p.rapidapi.com/search?keyword=${payload.keyword}&quantity=${payload.quantity}`,
+      headers: {
+        'X-RapidAPI-Key': '03fe0bf88dmsh92fe39773b74496p1ff443jsnaad711a67843',
+        'X-RapidAPI-Host': 'movie-tv-music-search-and-download.p.rapidapi.com'
+      }
+    };
+    axios
+      .request(options)
+      .then(function (response) {
+        console.log("SEARCH_DATA", response);
+        debugger;
+        commit("SEARCH_DATA", response.data);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  },
 };

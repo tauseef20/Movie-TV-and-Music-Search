@@ -1,20 +1,12 @@
 <template>
     <div>
       <a-row class="topRow">
-        <a-col align="middle" class="icon" :span="2">
-          <img
-            src="../static/home/television.png"
-            height="40px"
-            width="40px"
-            alt=""
-          />
-        </a-col>
         <a-col class="mt-2" align="middle" :span="22">
-          <h3>Download Most Popular Monthly TV Shows</h3>
+          <!-- <h3>Searching for {{ getSEARCHData.title }}</h3> -->
         </a-col>
       </a-row>
       <a-row>
-        <a-table :columns="columns" :data-source="getshowsData" bordered>
+        <a-table :columns="columns" :data-source="getSEARCHData" bordered>
           <!-- <a slot="image" slot-scope="obj">
             <span>
               <img :src="obj.img" height="70px" width="70px" alt="" />
@@ -31,7 +23,7 @@
             </a> -->
             
             <a slot="link" slot-scope="obj">
-              <a :href="obj.torrent" target="blank">Download TV Show</a>
+              <a :href="obj.torrent" target="blank">Download Now</a>
             </a>
          
         </a-table>
@@ -42,7 +34,7 @@
   <script>
   const columns = [
     {
-      title: "Name",
+        title: "Name",
       dataIndex: "title",
       key: "title",
       // scopedSlots: { customRender: "title" },
@@ -66,11 +58,8 @@
   import { mapGetters, mapActions } from "vuex";
   // import axios from "axios";
   export default {
-    created() {
-      this.tvData();
-    },
     computed: {
-      ...mapGetters("modules/data", ["getshowsData"]),
+      ...mapGetters("modules/data", ["getSEARCHData"]),
     },
     data() {
       return {
@@ -78,7 +67,7 @@
       };
     },
     methods: {
-      ...mapActions("modules/data", ["tvData"]),
+      ...mapActions("modules/data", ["SearchData"]),
     },
   };
   </script>

@@ -6,18 +6,28 @@
         </a-col>
         <a-col  :span="12">
         <a-row class="pt-4">
+            <NuxtLink to="/tvShows">
             <a-col class="signIn" :span="3">
-                TV Shows
+                
+                    TV Shows
+                
             </a-col>
+        </NuxtLink>
+        <NuxtLink to="/movies">
             <a-col class="signIn" :span="3">
                 Movies
             </a-col>
+        </NuxtLink>
+        <NuxtLink to="/games">
             <a-col class="signIn" :span="3">
                 Games
             </a-col>
+        </NuxtLink>
+        <NuxtLink to="/music">
             <a-col class="signIn" :span="10">
                 Treding Music
             </a-col>
+        </NuxtLink>
         </a-row>
         </a-col>
         <a-col  :span="6">

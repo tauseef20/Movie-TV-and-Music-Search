@@ -1,13 +1,28 @@
 <template>
+    <div class="container">
+      <a-row class="mt-5" :gutter="[10,10]">
+          <a-col :span="19">
+          <searchData/>
+          </a-col>
+          <a-col :span="5">
+          <sideBar/>
+          </a-col>
+       </a-row>
+    </div>
+  </template>
   
-</template>
-
-<script>
-export default {
-
-}
-</script>
-
-<style>
-
-</style>
+  <script>
+  import sideBar from "../components/sidebar.vue"
+  import searchData from "../components/searchData.vue"
+  export default {
+      components:{
+          sideBar,
+          searchData
+      }
+  
+  }
+  </script>
+  
+  <style>
+  
+  </style>

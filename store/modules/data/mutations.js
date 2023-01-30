@@ -13,6 +13,10 @@ export default {
   GAME_DATA(state, payload){
     debugger
     state.GAMEData = payload.result
+  },
+  SEARCH_DATA(state, payload){
+    debugger
+    state.SEARCHData = payload.result
   }
 
 };

@@ -13,6 +13,10 @@ export default {
     },
     getshowsData(state) {
         return state.showsData
-    }
+    },
+    getSEARCHData(state) {
+        return state.SEARCHData
+    },
+
 
 }

@@ -80,7 +80,7 @@
     methods: {
       ...mapActions("modules/data", ["musicData"]),
     },
-  };
+    }
   </script>
   
   <style>
