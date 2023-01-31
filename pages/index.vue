@@ -1,7 +1,10 @@
 <template>
   <div class="container">
     <a-row type="flex" justify="center" class="my-10 pt-5">
-      <a-col> Logo </a-col>
+      <div class="logo">
+        <a-col> <img src="../static/logo.svg" alt=""> </a-col>
+      </div>
+     
     </a-row>
     <a-row class="pt-5" type="flex" justify="center">
       <a-col :span="10">
@@ -106,6 +109,12 @@ export default {
 }
 .text{
   cursor: pointer;
+  color: #fff;
+}
+.text:hover{
+  cursor: pointer;
+  color: #ee490e;
+  text-decoration: underline;
 }
 .colorBg img {
   width: 60px;
@@ -135,5 +144,10 @@ font-weight: bold;
 }
 .ant-input:focus{
   border: 1px solid #ff6735;
+}
+.logo img{
+  width: 100%;
+  height: 150px;
+  /* border:2px yellow solid; */
 }
 </style>

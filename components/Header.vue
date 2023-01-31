@@ -1,8 +1,8 @@
 <template>
   <div>
     <a-row class="navbarRow">
-        <a-col align="center" class="NavTitle pt-2" :span="6">
-        <img src="../static/navbar/tunefind-white-260x80.png" alt="">
+        <a-col align="center" class="NavTitle pt-3" :span="6">
+        <img src="../static/logo.svg" alt="">
         </a-col>
         <a-col  :span="12">
         <a-row class="pt-4">
@@ -58,6 +58,11 @@ export default {
     color: #fff;
     font-size: 16px;
     border-bottom: 5px solid #ee490e;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
 }
 .signIn{
     color:#fff;

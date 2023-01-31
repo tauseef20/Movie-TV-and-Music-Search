@@ -86,4 +86,7 @@ font-weight: bold;
 .ant-input:focus{
   border: 1px solid #ff6735;
 }
+.ant-table-body{
+  background: #fff;
+}
 </style>
